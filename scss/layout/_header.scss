@@ -4,6 +4,7 @@
   top: 30px;
   width: 100%;
   justify-content: center;
+  z-index: 100;
   .container {
     display: flex;
     align-items: center;
@@ -52,7 +53,7 @@
         top: 50%;
         transform: translateY(-50%);
         right: 40px;
-        :nth-child(1) {
+        :first-child {
           top: 0;
         }
         :nth-child(2) {
@@ -80,7 +81,7 @@
     }
     .active {
       .icons {
-        :nth-child(1) {
+        :first-child {
           width: 100%;
           transform: rotateZ(-45deg);
           top: 7px;

@@ -1,0 +1,55 @@
+.cards {
+  position: relative;
+  top: -100px;
+  @include media(below) {
+    top: 20px;
+  }
+  .container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    @include media(below) {
+      grid-auto-flow: row;
+    }
+    .card {
+      width: 350px;
+      height: 250px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.2);
+      background-color: white;
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 20px;
+        .images {
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $main-color;
+          cursor: pointer;
+          transition: $main-timing;
+          &:hover {
+            background-color: $alt-color;
+          }
+        }
+        h3 {
+          font-weight: 500;
+          margin: 20px 0;
+        }
+        p {
+          font-weight: 300;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

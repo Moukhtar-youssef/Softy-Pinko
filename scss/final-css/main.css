@@ -3,6 +3,7 @@
   padding: 0;
   text-decoration: none;
   color: black;
+  font-family: "Raleway", sans-serif;
 }
 
 ul {
@@ -317,6 +318,8 @@ template {
 }
 
 .container {
+  display: block;
+  height: 100%;
   margin: 0px 200px;
 }
 @media (max-width: 1199px) {
@@ -336,6 +339,7 @@ template {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 100;
 }
 .navigation .container {
   display: -webkit-box;
@@ -406,7 +410,7 @@ template {
           transform: translateY(-50%);
   right: 40px;
 }
-.navigation .container .menu .icons :nth-child(1) {
+.navigation .container .menu .icons :first-child {
   top: 0;
 }
 .navigation .container .menu .icons :nth-child(2) {
@@ -431,7 +435,7 @@ template {
   overflow: hidden;
   height: 0;
 }
-.navigation .container .active .icons :nth-child(1) {
+.navigation .container .active .icons :first-child {
   width: 100%;
   -webkit-transform: rotateZ(-45deg);
           transform: rotateZ(-45deg);
@@ -477,6 +481,133 @@ template {
   background-repeat: no-repeat;
   background-position: top center;
   background-attachment: fixed;
+}
+.landing .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+.landing .container .main-txt {
+  color: white;
+  font-size: 40px;
+  font-weight: 400;
+}
+.landing .container .main-txt span {
+  color: white;
+  font-weight: bold;
+}
+.landing .container .content {
+  margin-top: 40px;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 100;
+  color: white;
+}
+.landing .container .btn {
+  text-transform: uppercase;
+  color: white;
+  background-color: #ff589e;
+  font-size: 12px;
+  padding: 15px;
+  border-radius: 30px;
+  margin-top: 40px;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.landing .container .btn:hover {
+  background-color: #4e47de;
+}
+
+.cards {
+  position: relative;
+  top: -100px;
+}
+@media (max-width: 1199px) {
+  .cards {
+    top: 20px;
+  }
+}
+.cards .container {
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+@media (max-width: 1199px) {
+  .cards .container {
+    grid-auto-flow: row;
+  }
+}
+.cards .container .card {
+  width: 350px;
+  height: 250px;
+  text-align: center;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+.cards .container .card .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px;
+}
+.cards .container .card .content .images {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #4e47de;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.cards .container .card .content .images:hover {
+  background-color: #ff589e;
+}
+.cards .container .card .content h3 {
+  font-weight: 500;
+  margin: 20px 0;
+}
+.cards .container .card .content p {
+  font-weight: 300;
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=main.css.map */
