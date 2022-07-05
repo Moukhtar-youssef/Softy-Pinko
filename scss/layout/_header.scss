@@ -1,0 +1,119 @@
+.navigation {
+  display: flex;
+  position: fixed;
+  top: 30px;
+  width: 100%;
+  justify-content: center;
+  .container {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    @include border-radius(50px);
+    @include media(below) {
+      @include border-radius(0);
+    }
+    background-color: white;
+    .logo {
+      margin-right: 100px;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      li {
+        margin-right: 40px;
+        font-size: 13px;
+        @include media(1500px) {
+          margin-right: 10px;
+        }
+        transition: $main-timing;
+        .active {
+          color: $alt-color;
+        }
+        :hover {
+          color: $alt-color;
+        }
+      }
+      @include media(below) {
+        display: none;
+      }
+    }
+    .menu {
+      display: none;
+      width: 100%;
+      height: 100%;
+      @include media(below) {
+        display: block;
+      }
+      .icons {
+        width: 30px;
+        height: 14px;
+        position: absolute;
+        top: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 40px;
+        :nth-child(1) {
+          top: 0;
+        }
+        :nth-child(2) {
+          top: 7px;
+        }
+        :last-child {
+          top: 14px;
+        }
+        :not(:nth-child(2)) {
+          width: 50%;
+        }
+        span {
+          position: absolute;
+          width: 75%;
+          height: 2px;
+          background-color: black;
+          transition: $main-timing;
+        }
+      }
+      ul {
+        display: block;
+        overflow: hidden;
+        height: 0;
+      }
+    }
+    .active {
+      .icons {
+        :nth-child(1) {
+          width: 100%;
+          transform: rotateZ(-45deg);
+          top: 7px;
+          background-color: red;
+        }
+        :nth-child(2) {
+          transform: translate(-90%, 0);
+          opacity: 0;
+        }
+        :last-child {
+          width: 100%;
+          transform: rotateZ(45deg);
+          top: 7px;
+          background-color: red;
+        }
+      }
+      ul {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        transition: $main-timing;
+        height: 427px;
+        li {
+          background-color: white;
+          margin: 0 20px;
+          border-top: 1px solid #eee;
+          line-height: 20px;
+          padding: 20px 0;
+        }
+      }
+    }
+  }
+}
