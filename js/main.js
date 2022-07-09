@@ -21,3 +21,24 @@ function animate(parent, ...childs) {
     }
   });
 }
+// add increasing number when up to specefic offset
+let section = document.querySelector(".numbers");
+let nums = document.querySelectorAll(".number strong");
+let started = false;
+window.addEventListener("scroll", () => {
+  if (window.scrollY > section.offsetTop - 200) {
+    if (!started) {
+      nums.forEach((strong) => startcount(strong));
+    }
+    started = true;
+  }
+});
+function startcount(ele) {
+  let goal = ele.dataset.goal;
+  let counting = setInterval(() => {
+    ele.innerHTML++;
+    if (ele.innerHTML == goal) {
+      clearInterval(counting);
+    }
+  }, 2000 / goal);
+}

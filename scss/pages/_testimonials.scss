@@ -1,0 +1,57 @@
+.testimonials {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  .comments {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: space-between;
+    @include media(below) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .comment {
+      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.2);
+      width: 300px;
+      text-align: center;
+      padding: 10px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      img {
+        margin: 20px;
+      }
+      p {
+        text-align: left;
+        margin-top: 25px;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-bottom: 25px;
+        font-weight: 400;
+        font-size: 15px;
+        color: #777;
+        letter-spacing: 0.6px;
+        line-height: 26px;
+      }
+      .user {
+        margin: 20px 0;
+        transition: $main-timing;
+        h3 {
+          font-weight: 300;
+        }
+        p {
+          color: $alt-color;
+          text-align: center;
+          line-height: normal;
+          margin: 0;
+        }
+      }
+      &:hover {
+        .user {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}

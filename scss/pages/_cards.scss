@@ -2,7 +2,8 @@
   position: relative;
   top: -100px;
   @include media(below) {
-    top: 20px;
+    top: 0;
+    margin-top: 100px;
   }
   .container {
     display: grid;
@@ -11,7 +12,10 @@
     align-items: center;
     gap: 20px;
     @include media(below) {
-      grid-auto-flow: row;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
     }
     .card {
       width: 350px;
@@ -21,6 +25,14 @@
       box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.2);
       background-color: white;
+      cursor: pointer;
+      &:hover {
+        .content {
+          .images {
+            background-color: $alt-color;
+          }
+        }
+      }
       .content {
         display: flex;
         align-items: center;
@@ -35,11 +47,7 @@
           align-items: center;
           justify-content: center;
           background-color: $main-color;
-          cursor: pointer;
           transition: $main-timing;
-          &:hover {
-            background-color: $alt-color;
-          }
         }
         h3 {
           font-weight: 500;

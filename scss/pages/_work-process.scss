@@ -1,0 +1,65 @@
+.work {
+  background: url(/images/work-process-bg-min.webp);
+  background-position: center left right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  .heading {
+    h1 {
+      color: white;
+    }
+    p {
+      color: white;
+    }
+  }
+  .work_cards {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    .work_card {
+      position: relative;
+      @include border-radius(15px);
+      width: 150px;
+      height: 175px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 1;
+      background-color: white;
+      padding: 10px;
+      cursor: pointer;
+      transition: $main-timing;
+      &::before {
+        content: "";
+        position: absolute;
+        padding: 10px;
+        display: block;
+        width: 150px;
+        height: 175px;
+        background-color: rgba($color: #fff, $alpha: 0.2);
+        @include border-radius(15px);
+        z-index: -1;
+        margin-top: 20px;
+        margin-left: 20px;
+      }
+      &:hover {
+        top: -10px;
+      }
+      img {
+        margin: 10px;
+      }
+      h3 {
+        font-weight: 400;
+        margin: 10px;
+      }
+      p {
+        color: #777;
+        text-align: center;
+        word-spacing: 5px;
+      }
+    }
+  }
+}

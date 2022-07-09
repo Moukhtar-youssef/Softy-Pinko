@@ -8,9 +8,15 @@
 ul {
   list-style: none;
 }
+button,
+input,
+textarea {
+  border: none;
+}
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;

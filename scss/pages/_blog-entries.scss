@@ -1,0 +1,43 @@
+.blog-entries {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  .blogs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include media(below) {
+      flex-direction: column;
+    }
+    .blog {
+      padding: 10px;
+      text-align: center;
+      h3 {
+        margin: 20px 0;
+        font-weight: 500;
+      }
+      p {
+        line-height: 20px;
+        font-weight: 300;
+        font-size: 15px;
+        color: #777;
+      }
+      img {
+        width: 99%;
+      }
+      button {
+        margin: 20px 0;
+        text-transform: uppercase;
+        @include border-radius(30px);
+        font-size: 15px;
+        padding: 10px;
+        background-color: $main-color;
+        color: white;
+        cursor: pointer;
+        transition: $main-timing;
+        &:hover {
+          background-color: $alt-color;
+        }
+      }
+    }
+  }
+}

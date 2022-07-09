@@ -5,17 +5,26 @@
   width: 100%;
   justify-content: center;
   z-index: 100;
+  @include media(900px) {
+    top: 0;
+  }
   .container {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     padding: 20px 20px;
     @include border-radius(50px);
-    @include media(below) {
+    @include media(900px) {
       @include border-radius(0);
+      height: 30px;
     }
     background-color: white;
     .logo {
       margin-right: 100px;
+      @include media(900px) {
+        position: absolute;
+        left: 0;
+      }
     }
     ul {
       display: flex;
@@ -34,15 +43,16 @@
           color: $alt-color;
         }
       }
-      @include media(below) {
+      @include media(900px) {
         display: none;
       }
     }
     .menu {
       display: none;
-      width: 100%;
+      width: 100vw;
       height: 100%;
-      @include media(below) {
+      padding: 0 20px;
+      @include media(900px) {
         display: block;
       }
       .icons {
@@ -103,14 +113,14 @@
         position: absolute;
         top: 100%;
         left: 0;
-        width: 100%;
+        width: 100vw;
         text-align: center;
         transition: $main-timing;
         height: 427px;
         li {
           background-color: white;
-          margin: 0 20px;
           border-top: 1px solid #eee;
+          margin: 0;
           line-height: 20px;
           padding: 20px 0;
         }

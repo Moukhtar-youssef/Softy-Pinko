@@ -1,0 +1,41 @@
+.numbers {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  background: url(/images/fun-facts-bg-min.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+    @include media(below) {
+      flex-direction: column;
+    }
+    .number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 30px;
+      margin: 10px;
+      strong {
+        color: white;
+      }
+      span {
+        margin-top: 15px;
+        font-size: 15px;
+        color: white;
+      }
+    }
+    img {
+      position: relative;
+      margin: 10px;
+      @include media(below) {
+        top: 0 !important;
+      }
+    }
+  }
+}
