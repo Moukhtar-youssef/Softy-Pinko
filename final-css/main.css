@@ -515,7 +515,7 @@ template {
 .landing {
   width: 100vw;
   height: 100vh;
-  background: url(/images/banner-bg-min.webp);
+  background: url(../images/banner-bg-min.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -779,7 +779,7 @@ template {
 }
 
 .work {
-  background: url(/images/work-process-bg-min.webp);
+  background: url(../images/work-process-bg-min.webp);
   background-position: center left right;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1046,7 +1046,7 @@ template {
 .numbers {
   padding-top: 50px;
   padding-bottom: 50px;
-  background: url(/images/fun-facts-bg-min.webp);
+  background: url(../images/fun-facts-bg-min.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
