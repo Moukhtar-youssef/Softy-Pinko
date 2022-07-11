@@ -11,6 +11,22 @@
     @include media(below) {
       margin: 0 10px;
     }
+    .first {
+      img {
+        @include animation(left);
+      }
+      .content {
+        @include animation(right);
+      }
+    }
+    .second {
+      img {
+        @include animation(right);
+      }
+      .content {
+        @include animation(left);
+      }
+    }
     .box {
       display: flex;
       align-items: center;

@@ -1,10 +1,11 @@
-.navigation {
+.navbar {
   display: flex;
   position: fixed;
   top: 30px;
   width: 100%;
   justify-content: center;
   z-index: 100;
+  text-transform: uppercase;
   @include media(900px) {
     top: 0;
   }
@@ -30,12 +31,17 @@
       display: flex;
       align-items: center;
       li {
+        text-transform: capitalize;
         margin-right: 40px;
         font-size: 13px;
         @include media(1500px) {
           margin-right: 10px;
         }
         transition: $main-timing;
+        a {
+          background: transparent !important;
+          margin: 0 !important;
+        }
         .active {
           color: $alt-color;
         }
@@ -118,6 +124,8 @@
         transition: $main-timing;
         height: 427px;
         li {
+          text-transform: capitalize;
+
           background-color: white;
           border-top: 1px solid #eee;
           margin: 0;

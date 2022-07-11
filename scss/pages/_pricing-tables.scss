@@ -2,11 +2,15 @@
   background-color: #f2f2fe;
   padding-top: $section-padding;
   padding-bottom: $section-padding;
+  .heading {
+    @include animation(up);
+  }
   .prices {
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-align: center;
+    @include animation(fade);
     @include media(below) {
       flex-direction: column;
     }

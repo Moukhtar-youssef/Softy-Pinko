@@ -1,6 +1,9 @@
 .blog-entries {
   padding-top: $section-padding;
   padding-bottom: $section-padding;
+  .heading {
+    @include animation(up);
+  }
   .blogs {
     display: flex;
     align-items: center;
@@ -8,6 +11,7 @@
     @include media(below) {
       flex-direction: column;
     }
+    @include animation(down);
     .blog {
       padding: 10px;
       text-align: center;

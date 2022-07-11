@@ -12,12 +12,14 @@
     p {
       color: white;
     }
+    @include animation(up);
   }
   .work_cards {
     margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 20px;
+    @include animation(down);
     .work_card {
       position: relative;
       @include border-radius(15px);
